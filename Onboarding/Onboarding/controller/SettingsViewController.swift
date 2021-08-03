@@ -20,16 +20,6 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func logoutbuttonTapped(_ sender: UIBarButtonItem) {
-        
-        let onboardingViewController = UIStoryboard(name: K.StorboardID.main, bundle:
-            nil).instantiateViewController(identifier: K.StorboardID.onboardingViewController)
-        
-        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate,
-           let window = sceneDelegate.window {
-            window.rootViewController = onboardingViewController
-            
-            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
-        }
-        
+        PresenterManager.shared.show(vc: .onboarding)
     }
 }

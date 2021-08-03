@@ -16,6 +16,7 @@
 		0A6E85E626B8EB2E0079B91C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E85E526B8EB2E0079B91C /* Helper.swift */; };
 		0A6E85E826B8ECDB0079B91C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E85E726B8ECDB0079B91C /* Constants.swift */; };
 		0A6E85EE26B902D20079B91C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E85ED26B902D20079B91C /* SettingsViewController.swift */; };
+		0A6E85F126B90B500079B91C /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E85F026B90B500079B91C /* PresenterManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0A6E85E526B8EB2E0079B91C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		0A6E85E726B8ECDB0079B91C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0A6E85ED26B902D20079B91C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0A6E85F026B90B500079B91C /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		0A6E85C926B8D80B0079B91C /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0A6E85EF26B90AF90079B91C /* manager */,
 				0A6E85E426B8EB240079B91C /* helper */,
 				0A6E85DE26B8DD340079B91C /* controller */,
 				0A6E85CA26B8D80B0079B91C /* AppDelegate.swift */,
@@ -90,6 +93,14 @@
 				0A6E85E726B8ECDB0079B91C /* Constants.swift */,
 			);
 			path = helper;
+			sourceTree = "<group>";
+		};
+		0A6E85EF26B90AF90079B91C /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				0A6E85F026B90B500079B91C /* PresenterManager.swift */,
+			);
+			path = manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 				0A6E85CD26B8D80B0079B91C /* SceneDelegate.swift in Sources */,
 				0A6E85E026B8DD4A0079B91C /* LoadingViewController.swift in Sources */,
 				0A6E85E626B8EB2E0079B91C /* Helper.swift in Sources */,
+				0A6E85F126B90B500079B91C /* PresenterManager.swift in Sources */,
 				0A6E85EE26B902D20079B91C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
