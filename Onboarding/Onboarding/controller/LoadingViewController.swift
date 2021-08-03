@@ -14,7 +14,6 @@ class LoadingViewController: UIViewController {
     //Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
     }
     
     //Appear
@@ -22,14 +21,9 @@ class LoadingViewController: UIViewController {
         super.viewDidAppear(animated)
         
         ///시간 Delay : 2초 후
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        delay(durationInSeconds: 2.0) {
             self.showInitialView()
         }
-    }
-    
-    
-    private func setupViews() {
-        view.backgroundColor = .orange
     }
     
     private func showInitialView() {
@@ -37,16 +31,15 @@ class LoadingViewController: UIViewController {
         if isUserloggedIn {
             // if user is logged in => main tab bar controller(storyID: MainTabBarController)
             /// storyboard -> viewController
-            let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
-            
+            let mainTabBarController = UIStoryboard(name: K.StorboardID.main, bundle:
+                nil).instantiateViewController(identifier: K.StorboardID.MainTabBarController)
             if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate,
                let window = sceneDelegate.window {
                 window.rootViewController = mainTabBarController
             }
-           
         } else {
             // if user is NOT logged in => show onboarding controller
-            performSegue(withIdentifier: "showOnboarding", sender: nil)
+            performSegue(withIdentifier: K.Segue.showOnboardingScreen, sender: nil)
         }
     }
 }
