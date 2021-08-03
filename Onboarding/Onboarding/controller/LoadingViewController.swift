@@ -30,7 +30,7 @@ class LoadingViewController: UIViewController {
     
         if isUserloggedIn {
             // if user is logged in => main tab bar controller(storyID: MainTabBarController)
-            /// storyboard -> viewController
+            /// maintabbar : storyboard -> viewController
             let mainTabBarController = UIStoryboard(name: K.StorboardID.main, bundle:
                 nil).instantiateViewController(identifier: K.StorboardID.MainTabBarController)
             if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate,

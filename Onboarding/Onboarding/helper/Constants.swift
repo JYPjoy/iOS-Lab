@@ -15,5 +15,6 @@ struct K {
     struct StorboardID {
         static let main = "Main"
         static let MainTabBarController = "MainTabBarController"
+        static let onboardingViewController = "OnboardingController"
     }
 }
