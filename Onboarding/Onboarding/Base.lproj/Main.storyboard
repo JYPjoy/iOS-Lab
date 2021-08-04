@@ -16,13 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="04D-hO-Ezi">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="04D-hO-Ezi">
+                                <rect key="frame" x="197" y="584" width="20" height="20"/>
                             </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imBalloon" translatesAutoresizingMaskIntoConstraints="NO" id="9MO-N8-feE">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Wl0-8q-fHN"/>
+                                    <constraint firstAttribute="width" constant="240" id="mZ0-E4-u7g"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="04D-hO-Ezi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WrS-pf-ee1"/>
+                            <constraint firstItem="9MO-N8-feE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cWH-Wf-5SW"/>
+                            <constraint firstItem="9MO-N8-feE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nyW-6v-aNo"/>
+                            <constraint firstItem="04D-hO-Ezi" firstAttribute="top" secondItem="9MO-N8-feE" secondAttribute="bottom" constant="16" id="xej-qH-Sge"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="xN9-gw-KcT" kind="show" identifier="showOnboarding" id="ZHq-6U-zsg"/>
@@ -30,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-319" y="115"/>
+            <point key="canvasLocation" x="-320.28985507246381" y="114.50892857142857"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="ocw-Cx-tE3">
@@ -167,6 +179,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="imBalloon" width="170.5" height="170.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
