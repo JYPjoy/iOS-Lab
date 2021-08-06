@@ -9,7 +9,7 @@ import UIKit
 
 class LoadingViewController: UIViewController {
     
-    private let isUserloggedIn = true
+    private let isUserloggedIn = false
     
     //Load
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class LoadingViewController: UIViewController {
 
         } else {
             // if user is NOT logged in => show onboarding controller(storyID: OnboardingController)
-            performSegue(withIdentifier: K.Segue.showOnboardingScreen, sender: nil)
+            performSegue(withIdentifier: K.Segue.showOnboarding, sender: nil)
         }
     }
 }
