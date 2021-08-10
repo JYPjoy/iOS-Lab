@@ -12,6 +12,7 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
     
     weak var delegate: OnboardingDelegate?
+    private let authManager = AuthManager()
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var emailTextField: UITextField!
@@ -110,14 +111,14 @@ class LoginViewController: UIViewController {
         //print("email: \(email), password: \(password)")
         MBProgressHUD.showAdded(to: view, animated: true)
         
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (result, error) in
+        authManager.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
             guard let this = self else { return }
             MBProgressHUD.hide(for: this.view, animated: true)
-            if let error = error {
-                this.showErrorMessageIfNeeded(text: error.localizedDescription)
-            } else if let _ = result?.user.uid {
+            switch result {
+            case .success:
                 this.delegate?.showMainTabBarController()
-                //print("userID created: \(userId)")//사용자 UID
+            case .failure(let error):
+                this.showErrorMessageIfNeeded(text: error.localizedDescription)
             }
         }
     }
@@ -136,15 +137,16 @@ class LoginViewController: UIViewController {
         
         MBProgressHUD.showAdded(to: view, animated: true)
         
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] (result, error) in
+        authManager.loginUser(withEmail: email, password: password) { [weak self] (result) in
             guard let this = self else { return }
             MBProgressHUD.hide(for: this.view, animated: true)
             
-            if let error = error { // error 에러
-                this.showErrorMessageIfNeeded(text: error.localizedDescription)
-                //The password is invalid or the user does not have a password
-            } else if let _ = result?.user.uid { // result 성공
+            switch result {
+            case .success: //성공
                 this.delegate?.showMainTabBarController()
+            case .failure(let error): //에러
+                this.showErrorMessageIfNeeded(text: error.localizedDescription)
+
             }
         }
     }

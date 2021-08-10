@@ -21,6 +21,7 @@
 		0A6E85EE26B902D20079B91C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E85ED26B902D20079B91C /* SettingsViewController.swift */; };
 		0A6E85F126B90B500079B91C /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E85F026B90B500079B91C /* PresenterManager.swift */; };
 		0A7E05E126BD12CE001F8FE1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E05E026BD12CE001F8FE1 /* HomeViewController.swift */; };
+		0A99B74426C26CC800B19D55 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99B74326C26CC800B19D55 /* AuthManager.swift */; };
 		0AB709CD26BCFCC2003DC131 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0AB709CC26BCFCC2003DC131 /* Podfile */; };
 		0ADB797726BBB311006ADF35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB797626BBB311006ADF35 /* LoginViewController.swift */; };
 		0ADFC37526BAC5E300AFAF6F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADFC37426BAC5E300AFAF6F /* OnboardingViewController.swift */; };
@@ -44,6 +45,7 @@
 		0A6E85ED26B902D20079B91C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A6E85F026B90B500079B91C /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		0A7E05E026BD12CE001F8FE1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0A99B74326C26CC800B19D55 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		0AB709CC26BCFCC2003DC131 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0ADB797626BBB311006ADF35 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0ADFC37426BAC5E300AFAF6F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				0A6E85F026B90B500079B91C /* PresenterManager.swift */,
+				0A99B74326C26CC800B19D55 /* AuthManager.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				0A6E85E826B8ECDB0079B91C /* Constants.swift in Sources */,
 				0A6E85CB26B8D80B0079B91C /* AppDelegate.swift in Sources */,
 				0A6E85CD26B8D80B0079B91C /* SceneDelegate.swift in Sources */,
+				0A99B74426C26CC800B19D55 /* AuthManager.swift in Sources */,
 				0ADFC37526BAC5E300AFAF6F /* OnboardingViewController.swift in Sources */,
 				0A6E85E026B8DD4A0079B91C /* LoadingViewController.swift in Sources */,
 				0A6E85E626B8EB2E0079B91C /* Helper.swift in Sources */,

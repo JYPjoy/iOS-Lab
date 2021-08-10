@@ -83,6 +83,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.4.3):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.6.1)
+  - Loaf (0.7.0)
   - MBProgressHUD (1.2.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
@@ -94,6 +95,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
+  - Loaf
   - MBProgressHUD (~> 1.2.0)
 
 SPEC REPOS:
@@ -108,6 +110,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - Loaf
     - MBProgressHUD
     - nanopb
     - PromisesObjC
@@ -123,10 +126,11 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 04c3e9a480bbcaa2ec3f5d27f1cdeb6a92f20c8d
   GoogleUtilities: 45dbb24a7f351d69d0a601482b39ad6c32e30dab
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
+  Loaf: d69937cd00649f3fa260beb8b7aef0a1feb861ef
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 8130ac4dc38c36710a9ea81374c28e48466d15cf
+PODFILE CHECKSUM: 13e42ed552632a3c851d031be3920f785f71a6a2
 
 COCOAPODS: 1.10.1
