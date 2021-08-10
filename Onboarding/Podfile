@@ -7,4 +7,6 @@ target 'Onboarding' do
 
   # Pods for Onboarding
     pod 'MBProgressHUD', '~> 1.2.0'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
 end

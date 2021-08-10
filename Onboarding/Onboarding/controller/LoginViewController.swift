@@ -7,12 +7,11 @@
 
 import UIKit
 import MBProgressHUD
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
     weak var delegate: OnboardingDelegate?
-    
-    private let issuccessfulLogin = true
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var emailTextField: UITextField!
@@ -90,21 +89,63 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
+//        let email = "abc@example.com"
+//        let password = "12345678"
+        
+        guard let email = emailTextField.text,
+            !email.isEmpty,
+            let password = passwordTextField.text,
+            !password.isEmpty,
+            let passwordConfirmation = passwordConfirmationTextField.text,
+            !passwordConfirmation.isEmpty else {
+            showErrorMessageIfNeeded(text: "Invalid form")
+            return
+        }
+        
+        guard password == passwordConfirmation else {
+            showErrorMessageIfNeeded(text: "Passwords are incorrect")
+            return
+        }
+        
+        //print("email: \(email), password: \(password)")
+        MBProgressHUD.showAdded(to: view, animated: true)
+        
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (result, error) in
+            guard let this = self else { return }
+            MBProgressHUD.hide(for: this.view, animated: true)
+            if let error = error {
+                this.showErrorMessageIfNeeded(text: error.localizedDescription)
+            } else if let _ = result?.user.uid {
+                this.delegate?.showMainTabBarController()
+                //print("userID created: \(userId)")//사용자 UID
+            }
+        }
     }
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         view.endEditing(true) //dismiss keyboard, move focus to progress bar
+        
+        guard let email = emailTextField.text,
+              !email.isEmpty,
+              let password = passwordTextField.text,
+              !password.isEmpty else {
+            showErrorMessageIfNeeded(text: "Invalid form")
+            return
+        }
+        
         MBProgressHUD.showAdded(to: view, animated: true)
         
-        delay(durationInSeconds: 2.0) {
-            MBProgressHUD.hide(for: self.view, animated: true)
-            if self.issuccessfulLogin {
-                self.delegate?.showMainTabBarController()
-            } else {
-                self.errorMessage = "Your password is invalid. Please try again."
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] (result, error) in
+            guard let this = self else { return }
+            MBProgressHUD.hide(for: this.view, animated: true)
+            
+            if let error = error { // error 에러
+                this.showErrorMessageIfNeeded(text: error.localizedDescription)
+                //The password is invalid or the user does not have a password
+            } else if let _ = result?.user.uid { // result 성공
+                this.delegate?.showMainTabBarController()
             }
-    
         }
     }
     

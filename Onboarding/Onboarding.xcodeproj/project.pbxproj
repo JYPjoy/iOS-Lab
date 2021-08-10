@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A0083D526BB7FF700509ED2 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0083D426BB7FF700509ED2 /* OnboardingCollectionViewCell.swift */; };
 		0A0083D826BB818E00509ED2 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0083D726BB818E00509ED2 /* Slide.swift */; };
+		0A1ACE4A26BE29B500A49C01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A1ACE4926BE29B500A49C01 /* GoogleService-Info.plist */; };
 		0A6E85CB26B8D80B0079B91C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E85CA26B8D80B0079B91C /* AppDelegate.swift */; };
 		0A6E85CD26B8D80B0079B91C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E85CC26B8D80B0079B91C /* SceneDelegate.swift */; };
 		0A6E85D226B8D80B0079B91C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6E85D026B8D80B0079B91C /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		0A0083D426BB7FF700509ED2 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A0083D726BB818E00509ED2 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		0A1ACE4926BE29B500A49C01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A6E85C726B8D80B0079B91C /* Onboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6E85CA26B8D80B0079B91C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A6E85CC26B8D80B0079B91C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +44,7 @@
 		0A6E85ED26B902D20079B91C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0A6E85F026B90B500079B91C /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		0A7E05E026BD12CE001F8FE1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0AB709CC26BCFCC2003DC131 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		0AB709CC26BCFCC2003DC131 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0ADB797626BBB311006ADF35 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0ADFC37426BAC5E300AFAF6F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		56238044ABE4C8A849D246EE /* Pods_Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 				0A6E85D026B8D80B0079B91C /* Main.storyboard */,
 				0A6E85D326B8D80B0079B91C /* Assets.xcassets */,
 				0A6E85D526B8D80B0079B91C /* LaunchScreen.storyboard */,
+				0A1ACE4926BE29B500A49C01 /* GoogleService-Info.plist */,
 				0A6E85D826B8D80B0079B91C /* Info.plist */,
 			);
 			path = Onboarding;
@@ -222,6 +225,7 @@
 			files = (
 				0A6E85D726B8D80B0079B91C /* LaunchScreen.storyboard in Resources */,
 				0A6E85D426B8D80B0079B91C /* Assets.xcassets in Resources */,
+				0A1ACE4A26BE29B500A49C01 /* GoogleService-Info.plist in Resources */,
 				0AB709CD26BCFCC2003DC131 /* Podfile in Resources */,
 				0A6E85D226B8D80B0079B91C /* Main.storyboard in Resources */,
 			);

@@ -7,6 +7,7 @@
 
 import UIKit
 import MBProgressHUD
+import FirebaseAuth
 
 //NavigationController -> Item2
 class SettingsViewController: UIViewController {
@@ -23,8 +24,14 @@ class SettingsViewController: UIViewController {
     @IBAction func logoutbuttonTapped(_ sender: UIBarButtonItem) {
         MBProgressHUD.showAdded(to: view, animated: true)
         delay(durationInSeconds: 0.5) {
-            MBProgressHUD.hide(for: self.view, animated: true)
-            PresenterManager.shared.show(vc: .onboarding)
+            do {
+                try Auth.auth().signOut()
+                MBProgressHUD.hide(for: self.view, animated: true)
+                PresenterManager.shared.show(vc: .onboarding)
+            } catch(let error) {
+                print(error.localizedDescription)
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
         }
     }
 }
