@@ -8,6 +8,7 @@
 import UIKit
 import MBProgressHUD
 import FirebaseAuth
+import Loaf
 
 class LoginViewController: UIViewController {
     
@@ -86,12 +87,39 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgetPasswordButtonTapped(_ sender: Any) {
+        let alertController = UIAlertController(title: "Forget Password", message: "Please enter your email address", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: nil)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            guard let this = self else { return }
+            if let textField = alertController.textFields?.first,
+               let email = textField.text,
+               !email.isEmpty {
+                this.authManager.resetPassword(withEmail: email) { (result) in
+                    switch result {
+                    case .success:
+                        this.showAlert(title: "PasswordReset Successful", message: "Please check your email to find the password reset link.")
+                    case .failure(let error):
+                        Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show()
+                    }
+                }
+                print("process this email: \(email)")
+            }
+        }
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
+    private func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
-//        let email = "abc@example.com"
-//        let password = "12345678"
         
         guard let email = emailTextField.text,
             !email.isEmpty,
