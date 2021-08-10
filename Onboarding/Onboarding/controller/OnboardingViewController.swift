@@ -23,6 +23,7 @@ class OnboardingViewController: UIViewController {
         setupViews()
         setupCollectionView()
         setupPageControl()
+        showCaption(atIndex: 0)
     }
     
     private func setupViews() {

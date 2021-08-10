@@ -7,7 +7,6 @@
 
 import UIKit
 import MBProgressHUD
-import FirebaseAuth
 import Loaf
 
 class LoginViewController: UIViewController {
@@ -153,6 +152,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        
         view.endEditing(true) //dismiss keyboard, move focus to progress bar
         
         guard let email = emailTextField.text,

@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct AuthManager {
     
-    let auth = Auth.auth()
+    private let auth = Auth.auth()
     
     enum AuthError: Error {
         case unknownError
@@ -51,6 +51,11 @@ struct AuthManager {
                 completion(.success(()))
             }
         }
+    }
+    
+    func isUserLoggedIn() -> Bool {
+        //Handle login state at app launch
+        return Auth.auth().currentUser != nil
     }
     
     
