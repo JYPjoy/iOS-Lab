@@ -7,6 +7,7 @@
 
 import UIKit
 
+//Lesson 14
 protocol OnboardingDelegate: class { //retain cycle
     func showMainTabBarController()
 }
@@ -63,6 +64,9 @@ class OnboardingViewController: UIViewController {
         }
     }
 }
+
+// MARK: - HERE
+
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
