@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let docRef = database.document("textfield/example")
         
         //실시간
-        //Q. [weak self]랑 self?
+        // [weak self]랑 self?
         docRef.addSnapshotListener { [weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else {
                 return
@@ -58,19 +58,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-//        docRef.getDocument { [weak self] snapshot, error in
-//            guard let data = snapshot?.data(), error == nil else {
-//                return
-//            }
-//
-//            guard let text = data["text"] as? String else {
-//                return
-//            }
-//
-//            DispatchQueue.main.async {
-//                self?.label.text = text //label에 textfield의 값 입력
-//            }
-//        }
+        docRef.getDocument { [weak self] snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                return
+            }
+
+            guard let text = data["text"] as? String else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                self?.label.text = text //label에 textfield의 값 입력
+            }
+        }
     }
 
     override func viewDidLayoutSubviews() {
