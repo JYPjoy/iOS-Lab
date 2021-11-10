@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignInViewController.swift
 //  socialLogin
 //
 //  Created by Jiyoung Park on 2021/11/10.
@@ -8,9 +8,8 @@
 import UIKit
 import SnapKit
 
+class SignInViewController: UIViewController {
 
-class ViewController: UIViewController {
-    
     private let titleLabel: UILabel = {
        let label = UILabel()
         label.text = "소셜 로그인하기"
@@ -21,30 +20,41 @@ class ViewController: UIViewController {
     
     private let kakaoBtn : UIButton = {
         let btn = UIButton()
-        btn.setImage(UIImage(named: "kakao_login_medium_wide"), for: .normal)
+        btn.backgroundColor = .yellow
+        btn.setTitleColor(.black, for: .normal)
+        btn.setTitle("카카오로 로그인하기", for: .normal)
+        btn.layer.cornerRadius = 8
+        //btn.setImage(UIImage(named: "kakao_login_medium_wide"), for: .normal)
         return btn
     }()
+    
     
     private let appleBtn: UIButton = {
         let btn = UIButton()
         btn.backgroundColor = .black
         btn.setTitle("애플로 로그인하기", for: .normal)
+        btn.layer.cornerRadius = 8
         return btn
     }()
     
+
     private let naverBtn: UIButton = {
         let btn = UIButton()
         btn.setTitle("네이버로 로그인하기", for: .normal)
         btn.backgroundColor = .systemGreen
+        btn.layer.cornerRadius = 8
         return btn
     }()
+    
     
     private let googleBtn: UIButton = {
        let btn = UIButton()
         btn.setTitle("구글로 로그인하기", for: .normal)
         btn.backgroundColor = .systemBlue
+        btn.layer.cornerRadius = 8
         return btn
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +88,7 @@ class ViewController: UIViewController {
             make.left.equalToSuperview().offset(50)
             make.right.equalToSuperview().offset(-50)
             make.top.equalTo(self.view.safeAreaLayoutGuide).offset(50)
-            make.height.equalTo(130)
+            make.height.equalTo(60)
         }
         
         kakaoBtn.snp.makeConstraints { make in
@@ -113,19 +123,29 @@ class ViewController: UIViewController {
     
     @objc func didTapKakao() {
         print("hello Kakao")
+        goToMain()
     }
     
     @objc func didTapApple() {
         print("hello Apple")
+        goToMain()
     }
     
     @objc func didTapNaver() {
         print("hello Naver")
+        goToMain()
     }
     
     @objc func didTapGoogle() {
         print("hello Google")
+        goToMain()
     }
     
-}
+    
+    private func goToMain() {
+        let vc = MainViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
 
+}
