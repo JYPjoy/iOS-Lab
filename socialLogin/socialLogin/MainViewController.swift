@@ -7,6 +7,9 @@
 
 import UIKit
 import SnapKit
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class MainViewController: UIViewController {
     
@@ -116,7 +119,28 @@ class MainViewController: UIViewController {
     
     @objc func didTapKakaoLogout() {
         print("Logout Kakao")
+        
+        // 로그 아웃
+        UserApi.shared.logout {(error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("logout() success.")
+            }
+        }
+        
+        // 연결 끊기
+        UserApi.shared.unlink {(error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("unlink() success.")
+            }
+        }
         gotoSignIn()
+        
     }
     
     @objc func didTapAppleLogout() {

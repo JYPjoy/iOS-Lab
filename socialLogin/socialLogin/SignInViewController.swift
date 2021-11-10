@@ -7,6 +7,9 @@
 
 import UIKit
 import SnapKit
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class SignInViewController: UIViewController {
 
@@ -123,6 +126,25 @@ class SignInViewController: UIViewController {
     
     @objc func didTapKakao() {
         print("hello Kakao")
+        
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+
+                    //do something -> 여기서 관련 코드 구현해야 함
+                    _ = oauthToken
+                    
+                    print("토큰 정보", oauthToken?.accessToken)
+                }
+            }
+        }
+        
+        
         goToMain()
     }
     
