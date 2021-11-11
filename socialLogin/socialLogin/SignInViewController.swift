@@ -21,6 +21,32 @@ class SignInViewController: UIViewController {
         return label
     }()
     
+    private let emailTextField: UITextField = {
+       let textField = UITextField()
+        textField.textContentType = .emailAddress
+        textField.keyboardType = .emailAddress
+        textField.placeholder = "이메일로 로그인하기"
+        return textField
+    }()
+    
+    
+    private let pwdTextField: UITextField  = {
+       let textField = UITextField()
+        textField.isSecureTextEntry = true
+        textField.keyboardType = .default
+        textField.textContentType = .password
+        textField.placeholder = "패스워드를 입력해주세요"
+        return textField
+    }()
+    
+    private let loginBtn: UIButton = {
+       let btn = UIButton()
+        btn.backgroundColor = .systemPink
+        btn.setTitle("로그인하기", for: .normal)
+        return btn
+    }()
+    
+    
     private let kakaoBtn : UIButton = {
         let btn = UIButton()
         btn.backgroundColor = .yellow
@@ -69,6 +95,10 @@ class SignInViewController: UIViewController {
 
     private func addSubviews() {
         view.addSubview(titleLabel)
+        view.addSubview(emailTextField)
+  
+        view.addSubview(pwdTextField)
+        view.addSubview(loginBtn)
         view.addSubview(kakaoBtn)
         view.addSubview(appleBtn)
         view.addSubview(naverBtn)
@@ -86,7 +116,8 @@ class SignInViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+      
+      
         titleLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(50)
             make.right.equalToSuperview().offset(-50)
@@ -94,10 +125,33 @@ class SignInViewController: UIViewController {
             make.height.equalTo(60)
         }
         
-        kakaoBtn.snp.makeConstraints { make in
+        emailTextField.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
             make.top.equalTo(titleLabel.snp.bottom).offset(20)
+            make.height.equalTo(50)
+            self.emailTextField.addBottomBorder(r: 0, g: 42, b: 255)
+        }
+        
+        pwdTextField.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.top.equalTo(emailTextField.snp.bottom).offset(20)
+            make.height.equalTo(50)
+            self.pwdTextField.addBottomBorder(r: 0, g: 42, b: 255)
+        }
+        
+        loginBtn.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.top.equalTo(pwdTextField.snp.bottom).offset(20)
+            make.height.equalTo(60)
+        }
+        
+        kakaoBtn.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.top.equalTo(loginBtn.snp.bottom).offset(20)
             make.height.equalTo(60)
         }
         
@@ -170,4 +224,15 @@ class SignInViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 
+}
+
+
+extension UITextField {
+    func addBottomBorder(r: Float, g: Float, b: CGFloat) {
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1)
+        bottomLine.backgroundColor = UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1).cgColor
+        borderStyle = .none
+        layer.addSublayer(bottomLine)
+    }
 }
