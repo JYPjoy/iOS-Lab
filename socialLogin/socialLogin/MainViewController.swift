@@ -61,6 +61,10 @@ class MainViewController: UIViewController {
         addBtnAction()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+         self.view.endEditing(true)
+   }
+    
     private func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(kakaoLogoutBtn)

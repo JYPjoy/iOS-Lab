@@ -91,12 +91,14 @@ class SignInViewController: UIViewController {
         addSubviews()
         addBtnAction()
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+         self.view.endEditing(true)
+   }
 
     private func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(emailTextField)
-  
         view.addSubview(pwdTextField)
         view.addSubview(loginBtn)
         view.addSubview(kakaoBtn)
@@ -193,7 +195,7 @@ class SignInViewController: UIViewController {
                     //do something -> 여기서 관련 코드 구현해야 함
                     _ = oauthToken
                     
-                    print("토큰 정보", oauthToken?.accessToken)
+                    //print("토큰 정보", oauthToken?.accessToken)
                 }
             }
         }
@@ -228,7 +230,7 @@ class SignInViewController: UIViewController {
 
 
 extension UITextField {
-    func addBottomBorder(r: Float, g: Float, b: CGFloat) {
+    func addBottomBorder(r: Float, g: Float, b: Float) {
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1)
         bottomLine.backgroundColor = UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1).cgColor
