@@ -15,6 +15,7 @@ struct Slide {
     static let collection: [Slide] = [
         Slide(
             imageName: "imSlide1",
+            //imageName: "img1",
             title: "Welcome to Trafel",
             description: "Trafel allows you to travel around the world, make new friends and create memorable experiences"),
         Slide(
