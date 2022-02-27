@@ -1,0 +1,10 @@
+Target dependency graph (4 targets)
+Alamofire in Pods, no dependencies
+SnapKit in Pods, no dependencies
+Pods-AlamofireDemo in Pods, depends on:
+Alamofire in Pods (explicit)
+SnapKit in Pods (explicit)
+AlamofireDemo in AlamofireDemo, depends on:
+Pods-AlamofireDemo in Pods (implicit dependency via file 'Pods_AlamofireDemo.framework' in build phase 'Link Binary')
+Alamofire in Pods (implicit dependency via options '-framework Alamofire' in build setting 'OTHER_LDFLAGS')
+SnapKit in Pods (implicit dependency via options '-framework SnapKit' in build setting 'OTHER_LDFLAGS')

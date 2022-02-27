@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>3ADF864F-7442-4A2F-A7AF-4FD257A99E70</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3ADF864F-7442-4A2F-A7AF-4FD257A99E70.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AlamofireDemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AlamofireDemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AlamofireDemo</string>
+			<key>timeStartedRecording</key>
+			<real>665022419.23424494</real>
+			<key>timeStoppedRecording</key>
+			<real>665022420.15105402</real>
+			<key>title</key>
+			<string>Build AlamofireDemo</string>
+			<key>uniqueIdentifier</key>
+			<string>3ADF864F-7442-4A2F-A7AF-4FD257A99E70</string>
+		</dict>
+		<key>958569C7-39B4-4EED-B494-9ED6F7C9119E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>958569C7-39B4-4EED-B494-9ED6F7C9119E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AlamofireDemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AlamofireDemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AlamofireDemo</string>
+			<key>timeStartedRecording</key>
+			<real>664448642.44991505</real>
+			<key>timeStoppedRecording</key>
+			<real>664448648.44984901</real>
+			<key>title</key>
+			<string>Build AlamofireDemo</string>
+			<key>uniqueIdentifier</key>
+			<string>958569C7-39B4-4EED-B494-9ED6F7C9119E</string>
+		</dict>
+		<key>D06DAD1E-4471-4FDF-B21A-9275EC6D303A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D06DAD1E-4471-4FDF-B21A-9275EC6D303A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AlamofireDemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AlamofireDemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AlamofireDemo</string>
+			<key>timeStartedRecording</key>
+			<real>665022344.92523599</real>
+			<key>timeStoppedRecording</key>
+			<real>665022355.88831103</real>
+			<key>title</key>
+			<string>Build AlamofireDemo</string>
+			<key>uniqueIdentifier</key>
+			<string>D06DAD1E-4471-4FDF-B21A-9275EC6D303A</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

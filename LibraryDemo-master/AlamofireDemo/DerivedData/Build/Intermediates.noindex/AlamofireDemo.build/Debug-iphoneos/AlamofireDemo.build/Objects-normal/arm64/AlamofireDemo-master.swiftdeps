@@ -1,0 +1,10 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "66c1cd4a6160ecf359eb40db163ef2a83d3a3fe7f29cc52f0fe35e032375ca6a"
+build_start_time: [1643329550, 577293872]
+build_end_time: [1643329554, 48748970]
+inputs:
+  "/Users/apple/Desktop/Filicoach/LibraryDemo/AlamofireDemo/AlamofireDemo/AppDelegate.swift": [1642755724, 756575822]
+  "/Users/apple/Desktop/Filicoach/LibraryDemo/AlamofireDemo/AlamofireDemo/Contact.swift": [1642755724, 757555007]
+  "/Users/apple/Desktop/Filicoach/LibraryDemo/AlamofireDemo/AlamofireDemo/CustomCell.swift": [1642755724, 757682323]
+  "/Users/apple/Desktop/Filicoach/LibraryDemo/AlamofireDemo/AlamofireDemo/SceneDelegate.swift": [1642755724, 757932186]
+  "/Users/apple/Desktop/Filicoach/LibraryDemo/AlamofireDemo/AlamofireDemo/ViewController.swift": [1642755724, 758107185]

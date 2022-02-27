@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>6545B6E1-FEB8-4F9E-949C-D57472E91FE6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6545B6E1-FEB8-4F9E-949C-D57472E91FE6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AlamofireDemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AlamofireDemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AlamofireDemo</string>
+			<key>timeStartedRecording</key>
+			<real>665022355.91970599</real>
+			<key>timeStoppedRecording</key>
+			<real>665022418.21378005</real>
+			<key>title</key>
+			<string>Run AlamofireDemo</string>
+			<key>uniqueIdentifier</key>
+			<string>6545B6E1-FEB8-4F9E-949C-D57472E91FE6</string>
+		</dict>
+		<key>B7E68DC4-2D76-4377-BE55-1F1AAD5267E2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B7E68DC4-2D76-4377-BE55-1F1AAD5267E2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AlamofireDemo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AlamofireDemo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AlamofireDemo</string>
+			<key>timeStartedRecording</key>
+			<real>665022420.15398502</real>
+			<key>timeStoppedRecording</key>
+			<real>665022445.196895</real>
+			<key>title</key>
+			<string>Run AlamofireDemo</string>
+			<key>uniqueIdentifier</key>
+			<string>B7E68DC4-2D76-4377-BE55-1F1AAD5267E2</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
