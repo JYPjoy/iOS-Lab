@@ -1,0 +1,6 @@
+framework module Pods_adpieSwift {
+  umbrella header "Pods-adpieSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
