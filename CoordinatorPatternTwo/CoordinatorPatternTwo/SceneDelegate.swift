@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  CoordinatorPattern
+//  CoordinatorPatternTwo
 //
-//  Created by Jiyoung Park on 2022/08/14.
+//  Created by Jiyoung Park on 2022/08/15.
 //
 
 import UIKit
@@ -13,20 +13,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let navVC = UINavigationController()
-        
-        let coordinator = MainCoordinator()
-        coordinator.navigationController = navVC
-        
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = navVC
-        window.makeKeyAndVisible()
-        self.window = window
-        
-        coordinator.start()
-
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
