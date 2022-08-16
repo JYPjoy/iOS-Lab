@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol Storyboarded {
-    static func instatiate() -> Self
+    static func instantiate() -> Self
 }
 
 extension Storyboarded where Self: UIViewController{
